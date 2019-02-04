@@ -7,11 +7,37 @@
 ThompsonVm::ThompsonVm(const std::vector <Instruction> &program, const std::string &input) :
     program(program), input(input) {}
 
-void ThompsonVm::tokenize() {
+int ThompsonVm::tokenize() {
     currList.add(Thread(program[pc]));
     for (char &c : input) {
-        for (unsigned long i = 0; i < currList.size(); i++) {
-            pc = currList[]
+        for (unsigned long thread = 0; thread < currList.size(); thread++) {
+            const Instruction &inst = currList[thread].inst;
+            pc = inst.pc;
+            switch (inst.opCode) {
+                case OpCode::CHAR:
+                    if (input[sp] < inst.ch &&  input[sp] > inst.ch2) {
+                        break;
+                    }
+                    nextList.add(Thread(program[pc+1]));
+                    break;
+                case OpCode::MATCH:
+                    return 1;       // FAILED: Not end of string
+                case OpCode::JMP:
+                    currList.add(Thread(program[inst.xPc]));
+                    break;
+                case OpCode::SPLIT:
+                    currList.add(Thread(program[inst.xPc]));
+                    currList.add(Thread(program[inst.yPc]));
+                    break;
+            }
+
         }
+        // Swap the 2 lists
+        currList.setListType(ListType::NEXT);
+        nextList.setListType(ListType::CURRENT);
+        std::swap(currList, nextList);
+
+        // Clear the next list
+        nextList.clear();
     }
 }

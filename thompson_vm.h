@@ -21,7 +21,7 @@ private:
 
 public:
     ThompsonVm(const std::vector<Instruction> &program, const std::string &input);
-    void tokenize();
+    int tokenize();
 };
 
 

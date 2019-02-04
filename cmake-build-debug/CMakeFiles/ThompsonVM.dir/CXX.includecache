@@ -6,6 +6,20 @@
 
 #IncludeRegexTransform: 
 
+/home/kalesh/CLionProjects/ThompsonVM/helper.cpp
+helper.h
+/home/kalesh/CLionProjects/ThompsonVM/helper.h
+
+/home/kalesh/CLionProjects/ThompsonVM/helper.h
+types.h
+/home/kalesh/CLionProjects/ThompsonVM/types.h
+string
+-
+fstream
+-
+sstream
+-
+
 /home/kalesh/CLionProjects/ThompsonVM/thompson_vm.cpp
 thompson_vm.h
 /home/kalesh/CLionProjects/ThompsonVM/thompson_vm.h
@@ -20,5 +34,11 @@ string
 set
 -
 
+/home/kalesh/CLionProjects/ThompsonVM/types.cpp
+types.h
 /home/kalesh/CLionProjects/ThompsonVM/types.h
+
+/home/kalesh/CLionProjects/ThompsonVM/types.h
+vector
+-
 
