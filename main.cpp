@@ -1,10 +1,12 @@
 #include <iostream>
+#include "helper.h"
+#include "thompson_vm.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    std::string inputString;
-    while (std::cin >> inputString) {
-        std::cout << inputString << std::endl;
-    }
-    return 0;
+    std::string inputStr;
+    getline(std::cin, inputStr);
+    std::string path = "nfa.ns";
+    const std::vector<Instruction> prog = getNfaProgram(path);
+    ThompsonVm tVm = ThompsonVm(prog, inputStr);
+    tVm.tokenize();
 }

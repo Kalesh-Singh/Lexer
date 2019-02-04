@@ -5,7 +5,10 @@ CMakeFiles/ThompsonVM.dir/helper.cpp.o: ../helper.cpp
 CMakeFiles/ThompsonVM.dir/helper.cpp.o: ../helper.h
 CMakeFiles/ThompsonVM.dir/helper.cpp.o: ../types.h
 
+CMakeFiles/ThompsonVM.dir/main.cpp.o: ../helper.h
 CMakeFiles/ThompsonVM.dir/main.cpp.o: ../main.cpp
+CMakeFiles/ThompsonVM.dir/main.cpp.o: ../thompson_vm.h
+CMakeFiles/ThompsonVM.dir/main.cpp.o: ../types.h
 
 CMakeFiles/ThompsonVM.dir/thompson_vm.cpp.o: ../thompson_vm.cpp
 CMakeFiles/ThompsonVM.dir/thompson_vm.cpp.o: ../thompson_vm.h

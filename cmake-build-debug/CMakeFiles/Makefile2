@@ -50,19 +50,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/clion/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /opt/clion/bin/cmake/linux/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kalesh/CLionProjects/ThompsonVM
+CMAKE_SOURCE_DIR = /Users/kaleshsingh/Desktop/Lexer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kalesh/CLionProjects/ThompsonVM/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/kaleshsingh/Desktop/Lexer/cmake-build-debug
 
 #=============================================================================
 # Target rules for target CMakeFiles/ThompsonVM.dir
@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /home/kalesh/CLionProjects/ThompsonVM/cmake-build-debug
 CMakeFiles/ThompsonVM.dir/all:
 	$(MAKE) -f CMakeFiles/ThompsonVM.dir/build.make CMakeFiles/ThompsonVM.dir/depend
 	$(MAKE) -f CMakeFiles/ThompsonVM.dir/build.make CMakeFiles/ThompsonVM.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kalesh/CLionProjects/ThompsonVM/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target ThompsonVM"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/kaleshsingh/Desktop/Lexer/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target ThompsonVM"
 .PHONY : CMakeFiles/ThompsonVM.dir/all
 
 # Include target in all.
@@ -81,9 +81,9 @@ all: CMakeFiles/ThompsonVM.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ThompsonVM.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kalesh/CLionProjects/ThompsonVM/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kaleshsingh/Desktop/Lexer/cmake-build-debug/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ThompsonVM.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kalesh/CLionProjects/ThompsonVM/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/kaleshsingh/Desktop/Lexer/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ThompsonVM.dir/rule
 
 # Convenience name for target.

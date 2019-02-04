@@ -20,7 +20,7 @@ private:
     StateList nextList = StateList(ListType::NEXT);
 
 public:
-    ThompsonVm(const std::vector<Instruction> &program, const std::string &input);
+    ThompsonVm(const std::vector<Instruction> &program, std::string &input);
     int tokenize();
 };
 

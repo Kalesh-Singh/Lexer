@@ -4,7 +4,7 @@
 
 #include "thompson_vm.h"
 
-ThompsonVm::ThompsonVm(const std::vector <Instruction> &program, const std::string &input) :
+ThompsonVm::ThompsonVm(const std::vector <Instruction> &program, std::string &input) :
     program(program), input(input) {}
 
 int ThompsonVm::tokenize() {
