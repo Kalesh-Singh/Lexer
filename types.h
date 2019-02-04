@@ -50,11 +50,10 @@ private:
     std::vector<Thread> threads;
 public:
     StateList(ListType listType);
+    void setListType(ListType listType);
     void add(Thread &thread);
     Thread remove();
     void clear();
 };
-
-
 
 #endif //THOMPSONVM_TYPES_H

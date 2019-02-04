@@ -36,3 +36,7 @@ Thread StateList::remove() {
 void StateList::clear() {
     threads.clear();
 }
+
+void StateList::setListType(ListType listType) {
+    this->listType = listType;
+}
