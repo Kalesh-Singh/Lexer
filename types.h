@@ -67,6 +67,6 @@ public:
     Match(unsigned int matchPc, const std::string &input, unsigned int startSp, unsigned int matchSp);
 };
 
-std::ostream &operator << (std::ostream &stream, const Match &match);
+std::ostream &operator<<(std::ostream &stream, const Match &match);
 
 #endif //THOMPSONVM_TYPES_H
