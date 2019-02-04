@@ -14,4 +14,4 @@ OpCode getOpCode(const std::string &opCodeStr);
 Instruction getInstruction(const std::string &instString);
 std::vector<Instruction> getNfaProgram(std::string &nfaPath);
 
-#endif THOMPSONVM_HELPER_H
+#endif //THOMPSONVM_HELPER_H
