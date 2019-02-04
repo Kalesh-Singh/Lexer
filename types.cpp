@@ -20,7 +20,7 @@ Instruction::Instruction(unsigned int pc, OpCode opCode, unsigned int xPc, unsig
 
 StateList::StateList(ListType listType) : listType(listType) {}
 
-void StateList::add(Thread &thread) {
+void StateList::add(Thread thread) {
     if (thread.inst.listType != listType) {
         thread.inst.listType = listType;
         threads.push_back(thread);
@@ -39,4 +39,12 @@ void StateList::clear() {
 
 void StateList::setListType(ListType listType) {
     this->listType = listType;
+}
+
+unsigned long StateList::size() {
+    return threads.size();
+}
+
+const Thread &StateList::operator[](unsigned long i) {
+    return threads[i];
 }

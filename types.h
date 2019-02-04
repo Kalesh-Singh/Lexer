@@ -51,9 +51,11 @@ private:
 public:
     StateList(ListType listType);
     void setListType(ListType listType);
-    void add(Thread &thread);
+    void add(Thread thread);
     Thread remove();
     void clear();
+    unsigned long size();
+    const Thread& operator[](unsigned long i);
 };
 
 #endif //THOMPSONVM_TYPES_H
