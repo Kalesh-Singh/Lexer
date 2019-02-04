@@ -177,6 +177,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/ThompsonVM.dir/build.make CMakeFiles/ThompsonVM.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+thompson_vm.o: thompson_vm.cpp.o
+
+.PHONY : thompson_vm.o
+
+# target to build an object file
+thompson_vm.cpp.o:
+	$(MAKE) -f CMakeFiles/ThompsonVM.dir/build.make CMakeFiles/ThompsonVM.dir/thompson_vm.cpp.o
+.PHONY : thompson_vm.cpp.o
+
+thompson_vm.i: thompson_vm.cpp.i
+
+.PHONY : thompson_vm.i
+
+# target to preprocess a source file
+thompson_vm.cpp.i:
+	$(MAKE) -f CMakeFiles/ThompsonVM.dir/build.make CMakeFiles/ThompsonVM.dir/thompson_vm.cpp.i
+.PHONY : thompson_vm.cpp.i
+
+thompson_vm.s: thompson_vm.cpp.s
+
+.PHONY : thompson_vm.s
+
+# target to generate assembly for a file
+thompson_vm.cpp.s:
+	$(MAKE) -f CMakeFiles/ThompsonVM.dir/build.make CMakeFiles/ThompsonVM.dir/thompson_vm.cpp.s
+.PHONY : thompson_vm.cpp.s
+
 types.o: types.cpp.o
 
 .PHONY : types.o
@@ -219,6 +246,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... thompson_vm.o"
+	@echo "... thompson_vm.i"
+	@echo "... thompson_vm.s"
 	@echo "... types.o"
 	@echo "... types.i"
 	@echo "... types.s"

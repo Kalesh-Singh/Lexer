@@ -93,6 +93,12 @@
 		<Unit filename="/home/kalesh/CLionProjects/ThompsonVM/main.cpp">
 			<Option target="ThompsonVM"/>
 		</Unit>
+		<Unit filename="/home/kalesh/CLionProjects/ThompsonVM/thompson_vm.cpp">
+			<Option target="ThompsonVM"/>
+		</Unit>
+		<Unit filename="/home/kalesh/CLionProjects/ThompsonVM/thompson_vm.h">
+			<Option target="ThompsonVM"/>
+		</Unit>
 		<Unit filename="/home/kalesh/CLionProjects/ThompsonVM/types.cpp">
 			<Option target="ThompsonVM"/>
 		</Unit>

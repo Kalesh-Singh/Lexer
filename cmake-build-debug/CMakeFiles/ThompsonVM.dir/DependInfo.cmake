@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kalesh/CLionProjects/ThompsonVM/helper.cpp" "/home/kalesh/CLionProjects/ThompsonVM/cmake-build-debug/CMakeFiles/ThompsonVM.dir/helper.cpp.o"
   "/home/kalesh/CLionProjects/ThompsonVM/main.cpp" "/home/kalesh/CLionProjects/ThompsonVM/cmake-build-debug/CMakeFiles/ThompsonVM.dir/main.cpp.o"
+  "/home/kalesh/CLionProjects/ThompsonVM/thompson_vm.cpp" "/home/kalesh/CLionProjects/ThompsonVM/cmake-build-debug/CMakeFiles/ThompsonVM.dir/thompson_vm.cpp.o"
   "/home/kalesh/CLionProjects/ThompsonVM/types.cpp" "/home/kalesh/CLionProjects/ThompsonVM/cmake-build-debug/CMakeFiles/ThompsonVM.dir/types.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -22,38 +22,38 @@ Instruction getInstruction(const std::string &instString) {
     std::stringstream ss;
     ss << instString;
 
-    unsigned int instNum;
+    unsigned int pc;
     OpCode opCode;
-    char ch;
-    unsigned int xInst;
-    unsigned int yInst;
+    int ch;
+    int ch2;
+    unsigned int xPc;
+    unsigned int yPc;
 
     std::string opCodeStr;
     Instruction instruction;
 
-    ss >> instNum >> opCodeStr;
+    ss >> pc >> opCodeStr;
 
     opCode = getOpCode(opCodeStr);
 
     switch (opCode) {
         case OpCode::CHAR:
-            char ch2;
             ss >> ch >> ch2;
             if (ch != ch2) {
                 // TODO: Throw an exception.
             }
-            instruction = Instruction(instNum, opCode, ch);
+            instruction = Instruction(pc, opCode, (char) ch, (char) ch2);
             break;
         case OpCode::MATCH:
-            instruction = Instruction(instNum, opCode);
+            instruction = Instruction(pc, opCode);
             break;
         case OpCode::JMP:
-            ss >> xInst;
-            instruction = Instruction(instNum, opCode, xInst);
+            ss >> xPc;
+            instruction = Instruction(pc, opCode, xPc);
             break;
         case OpCode::SPLIT:
-            ss >> xInst >> yInst;
-            instruction = Instruction(instNum, opCode, xInst, yInst);
+            ss >> xPc >> yPc;
+            instruction = Instruction(pc, opCode, xPc, yPc);
             break;
     }
 
@@ -80,6 +80,5 @@ std::vector<Instruction> getNfaProgram(std::string &nfaPath) {
         // TODO: Throw an exception.
     }
 
-
-    return std::vector<Instruction>();
+    return nfaProgram;
 }

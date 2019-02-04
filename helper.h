@@ -6,7 +6,6 @@
 #define THOMPSONVM_HELPER_H
 
 #include "types.h"
-#include <vector>
 #include <string>
 #include <fstream>
 #include <sstream>
