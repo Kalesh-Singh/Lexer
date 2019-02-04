@@ -6,8 +6,6 @@
 #define THOMPSONVM_THOMPSON_VM_H
 
 #include "types.h"
-#include <vector>
-#include <string>
 #include <set>
 
 class ThompsonVm {

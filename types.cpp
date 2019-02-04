@@ -48,3 +48,13 @@ unsigned long StateList::size() {
 const Thread &StateList::operator[](unsigned long i) {
     return threads[i];
 }
+
+Match::Match(unsigned int matchPc, const std::string &input, unsigned int startSp, unsigned int matchSp) {
+    matchStr = input.substr(startSp, matchSp-startSp);
+    this->matchPc = matchPc;
+}
+
+std::ostream &operator<<(std::ostream &out, const Match &match) {
+    out << match.matchPc << ": \"" << match.matchStr << "\"";
+    return out;
+}

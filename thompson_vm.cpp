@@ -3,11 +3,16 @@
 //
 
 #include "thompson_vm.h"
+#include <iostream>         // TODO: Delete
 
 ThompsonVm::ThompsonVm(const std::vector <Instruction> &program, std::string &input) :
     program(program), input(input) {}
 
 int ThompsonVm::tokenize() {
+    int startSp = sp;
+    int matchSp = -1;
+    int matchPc = -1;
+
     currList.add(Thread(program[pc]));
     for (char &c : input) {
         for (unsigned long thread = 0; thread < currList.size(); thread++) {
@@ -39,5 +44,13 @@ int ThompsonVm::tokenize() {
 
         // Clear the next list
         nextList.clear();
+    }
+
+    // Get all the matches
+    for (int thread = 0; thread < currList.size(); thread++) {
+        const Instruction &inst = currList[thread].inst;
+        if (inst.opCode == OpCode::MATCH) {
+            std::cout << inst.pc << std::endl;
+        }
     }
 }

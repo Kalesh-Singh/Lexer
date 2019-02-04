@@ -5,7 +5,9 @@
 #ifndef THOMPSONVM_TYPES_H
 #define THOMPSONVM_TYPES_H
 
+#include <iostream>
 #include <vector>
+#include <string>
 
 enum class OpCode {
     CHAR,
@@ -41,7 +43,7 @@ public:
 class Thread {
 public:
     Instruction inst;
-    Thread(Instruction &inst) : inst(inst) {}
+    Thread(Instruction inst) : inst(inst) {}
 };
 
 class StateList {
@@ -57,5 +59,14 @@ public:
     unsigned long size();
     const Thread& operator[](unsigned long i);
 };
+
+class Match {
+public:
+    std::string matchStr;
+    int matchPc;
+    Match(unsigned int matchPc, const std::string &input, unsigned int startSp, unsigned int matchSp);
+};
+
+std::ostream &operator << (std::ostream &stream, const Match &match);
 
 #endif //THOMPSONVM_TYPES_H
