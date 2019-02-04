@@ -78,6 +78,7 @@ std::vector<Instruction> getNfaProgram(std::string &nfaPath) {
         nfaFile.close();
     } else {
         // TODO: Throw an exception.
+        std::cout << "ERR: Could not open file." << std::endl;
     }
 
     return nfaProgram;
