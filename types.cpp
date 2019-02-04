@@ -49,6 +49,10 @@ const Thread &StateList::operator[](unsigned long i) {
     return threads[i];
 }
 
+const bool StateList::empty() {
+    return threads.size() == 0;
+}
+
 Match::Match(unsigned int matchPc, const std::string &input, unsigned int startSp, unsigned int matchSp) {
     matchStr = input.substr(startSp, matchSp-startSp);
     this->matchPc = matchPc;

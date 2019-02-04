@@ -58,6 +58,7 @@ public:
     void clear();
     unsigned long size();
     const Thread& operator[](unsigned long i);
+    const bool empty();
 };
 
 class Match {
