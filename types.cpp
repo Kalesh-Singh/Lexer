@@ -18,6 +18,8 @@ Instruction::Instruction(unsigned int pc, OpCode opCode, unsigned int xPc) :
 Instruction::Instruction(unsigned int pc, OpCode opCode, unsigned int xPc, unsigned int yPc) : pc(
         pc), opCode(opCode), xPc(xPc), yPc(yPc) {}
 
+StateList::StateList(ListType listType) : listType(listType) {}
+
 void StateList::add(Thread &thread) {
     if (thread.inst.listType != listType) {
         thread.inst.listType = listType;

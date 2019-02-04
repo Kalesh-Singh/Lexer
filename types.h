@@ -49,6 +49,8 @@ private:
     ListType listType;
     std::vector<Thread> threads;
 public:
+    StateList(ListType listType);
+
     void add(Thread &thread);
     Thread remove();
     void clear();
