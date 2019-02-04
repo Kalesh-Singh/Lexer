@@ -7,9 +7,6 @@
 ThompsonVm::ThompsonVm(const std::vector <Instruction> &program, const std::string &input) :
     program(program), input(input) {}
 
-void ThompsonVm::lex() {
-    curr_list.insert(Thread(pc));
-    for (char &c : input) {
+void ThompsonVm::tokenize() {
 
-    }
 }

@@ -16,12 +16,12 @@ private:
     std::string input;
     unsigned int pc = 0;
     unsigned int sp = 0;
-    std::vector<Thread> curr_list;
-    std::vector<Thread> next_list;
+    StateList currList = StateList(ListType::CURRENT);
+    StateList nextList = StateList(ListType::NEXT);
 
 public:
     ThompsonVm(const std::vector<Instruction> &program, const std::string &input);
-    void lex();
+    void tokenize();
 };
 
 
