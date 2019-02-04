@@ -1,0 +1,3 @@
+/home/kalesh/CLionProjects/ThompsonVM/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/kalesh/CLionProjects/ThompsonVM/cmake-build-debug/CMakeFiles/ThompsonVM.dir
+/home/kalesh/CLionProjects/ThompsonVM/cmake-build-debug/CMakeFiles/edit_cache.dir

@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/ThompsonVM.dir/main.cpp.o CMakeFiles/ThompsonVM.dir/types.cpp.o CMakeFiles/ThompsonVM.dir/helper.cpp.o  -o ThompsonVM 
