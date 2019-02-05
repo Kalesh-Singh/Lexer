@@ -25,7 +25,7 @@ int ThompsonVm::tokenize() {
             switch (inst.opCode) {
                 case OpCode::CHAR:
                     if (sp < input.size() && input[sp] >= inst.ch && input[sp] <= inst.ch2) {
-                        nextList.add(program[pc+1]);
+                        nextList.add(program[pc + 1]);
                     }
                     break;
                 case OpCode::MATCH:
@@ -38,7 +38,9 @@ int ThompsonVm::tokenize() {
                         matchPc = pc;
                         matchSp = sp;
                     }
+#ifdef DEBUG
                     std::cout << "Matched: " << matchPc << ": [" << startSp << ", " << matchSp << ")" << std::endl;
+#endif
                     break;
                 case OpCode::JMP:
                     currList.add(program[inst.xPc]);
@@ -80,7 +82,9 @@ int ThompsonVm::tokenize() {
 #endif
 
         if (currList.empty() && matchPc != -1) {        // If there was a match and states were exhausted
+#ifdef DEBUG
             std::cout << "Check for state exhaustion and match" << std::endl;
+#endif
             Match match = Match(matchPc, input, startSp, matchSp);
             matches.push_back(match);
             for (Instruction &inst : program) {
@@ -93,8 +97,9 @@ int ThompsonVm::tokenize() {
             std::cout << "SP = " << sp << std::endl;
         }
     }
-
+#ifdef DEBUG
     std::cout << "Matches Size: " << matches.size() << std::endl;
+#endif
     // Print all the matches.
     for (Match &m : matches) {
         std::cout << m << std::endl;
