@@ -61,6 +61,7 @@ Instruction getInstruction(const std::string &instString) {
         // TODO: Throw an exception.
     }
 
+    std::cout << instruction;
 
     return instruction;
 }

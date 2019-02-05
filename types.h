@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <vector>
+#include <stack>
 #include <string>
 
 enum class OpCode {
@@ -40,26 +41,30 @@ public:
     Instruction(unsigned int pc, OpCode opCode, unsigned int xPc, unsigned int yPc);   // SPLIT constructor
 };
 
+std::ostream &operator<<(std::ostream &out, const Instruction &inst);
+
 class Thread {
 public:
     Instruction inst;
-    Thread(Instruction inst) : inst(inst) {}
+
+    explicit Thread(Instruction inst) : inst(inst) {}
 };
 
 class StateList {
-private:
-    ListType listType;
-    std::vector<Thread> threads;
 public:
-    StateList(ListType listType);
+    ListType listType;
+    std::stack<Thread> threads;
+
+    explicit StateList(ListType listType);
     void setListType(ListType listType);
-    void add(Thread thread);
-    Thread remove();
+    void push(Thread thread);
+    Thread pop();
     void clear();
-    unsigned long size();
-    const Thread& operator[](unsigned long i);
+    unsigned long size() const;
     const bool empty();
 };
+
+std::ostream &operator<<(std::ostream &out, const StateList &list);
 
 class Match {
 public:
@@ -68,6 +73,6 @@ public:
     Match(unsigned int matchPc, const std::string &input, unsigned int startSp, unsigned int matchSp);
 };
 
-std::ostream &operator<<(std::ostream &stream, const Match &match);
+std::ostream &operator<<(std::ostream &out, const Match &match);
 
 #endif //THOMPSONVM_TYPES_H
