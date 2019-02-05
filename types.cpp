@@ -4,7 +4,7 @@
 
 #include "types.h"
 
-Instruction::Instruction() {}
+Instruction::Instruction() = default;
 
 Instruction::Instruction(unsigned int pc, OpCode opCode, char ch, char ch2) :
     pc(pc), opCode(opCode), ch(ch), ch2(ch2) {}
@@ -20,21 +20,21 @@ Instruction::Instruction(unsigned int pc, OpCode opCode, unsigned int xPc, unsig
 
 StateList::StateList(ListType listType) : listType(listType) {}
 
-void StateList::add(Thread &thread) {
-    if (thread.inst.listType != listType) {
-        thread.inst.listType = listType;
-        threads.push_back(thread);
+void StateList::add(Instruction &inst) {
+    if (inst.listType != listType) {
+        inst.listType = listType;
+        insts.push_back(inst);
     }
 }
 
-Thread StateList::pop() {
-    Thread thread = threads.back();
-    threads.pop_back();
-    return thread;
+Instruction StateList::pop() {
+    Instruction inst = insts.back();
+    insts.pop_back();
+    return inst;
 }
 
 void StateList::clear() {
-    threads.clear();
+    insts.clear();
 }
 
 void StateList::setListType(ListType listType) {
@@ -42,15 +42,15 @@ void StateList::setListType(ListType listType) {
 }
 
 unsigned long StateList::size() const {
-    return threads.size();
+    return insts.size();
 }
 
-const Thread &StateList::operator[](unsigned long i) {
-    return threads[i];
+const Instruction &StateList::operator[](unsigned long i) {
+    return insts[i];
 }
 
 const bool StateList::empty() {
-    return threads.empty();
+    return insts.empty();
 }
 
 Match::Match(unsigned int matchPc, const std::string &input, unsigned int startSp, unsigned int matchSp) {
@@ -84,9 +84,9 @@ std::ostream &operator<<(std::ostream &out, const StateList &list) {
     out << "[";
     for (int i = 0; i < list.size(); i++) {
         if (i != list.size() - 1) {
-            out << list.threads[i].inst.pc << ", ";
+            out << list.insts[i].pc << ", ";
         } else {
-            out << list.threads[i].inst.pc;
+            out << list.insts[i].pc;
         }
     }
     out << "]";

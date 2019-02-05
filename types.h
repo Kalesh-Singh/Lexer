@@ -42,25 +42,18 @@ public:
 
 std::ostream &operator<<(std::ostream &out, const Instruction &inst);
 
-class Thread {
-public:
-    Instruction inst;
-
-    explicit Thread(Instruction &inst) : inst(inst) {}
-};
-
 class StateList {
 public:
     ListType listType;
-    std::vector<Thread> threads;
+    std::vector<Instruction> insts;
 
     explicit StateList(ListType listType);
     void setListType(ListType listType);
-    void add(Thread &thread);
-    Thread pop();
+    void add(Instruction &inst);
+    Instruction pop();
     void clear();
     unsigned long size() const;
-    const Thread& operator[](unsigned long i);
+    const Instruction& operator[](unsigned long i);
     const bool empty();
 };
 
