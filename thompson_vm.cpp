@@ -15,28 +15,33 @@ int ThompsonVm::tokenize() {
     int matchSp = -1;
     int matchPc = -1;
 
-    currList.add(Thread(program[pc]));
-    for (unsigned int sp = 0;  sp < input.size(); sp++) {
+    currList.add(Thread(program[0]));
+
+    for (unsigned int sp = 0;  sp <= input.size(); sp++) {
         while (!currList.empty()) {
             const Instruction &inst = currList.pop().inst;
             pc = inst.pc;
             switch (inst.opCode) {
                 case OpCode::CHAR:
-                    if (input[sp] < inst.ch &&  input[sp] > inst.ch2) {
+                    if (sp < input.size()
+                        && input[sp] < inst.ch
+                        &&  input[sp] > inst.ch2) {
                         break;
                     }
                     nextList.add(Thread(program[pc+1]));
                     break;
                 case OpCode::MATCH:
                     // TODO: Handle prefix matches here
-                    std::cout << "Matched!" << std::endl;
-                    if (matchSp < sp) {         // If the match was shorter than the current match
+
+                    if (matchSp < sp) {             // If the match was shorter than the current match
                             matchPc = pc;
                             matchSp = sp;
-                    } else if (matchPc > pc) {      // Resetting the matchSp from previous runs
+                    } else if (matchPc > pc) {      // Choose the match that came earlier
                             matchPc = pc;
                             matchSp = sp;
                     }
+
+                    std::cout << "Matched: " << input.substr(startSp, matchSp - startSp) << std::endl;
                     break;
                 case OpCode::JMP:
                     currList.add(Thread(program[inst.xPc]));

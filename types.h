@@ -46,7 +46,7 @@ class Thread {
 public:
     Instruction inst;
 
-    explicit Thread(Instruction inst) : inst(inst) {}
+    explicit Thread(Instruction &inst) : inst(inst) {}
 };
 
 class StateList {
@@ -56,7 +56,7 @@ public:
 
     explicit StateList(ListType listType);
     void setListType(ListType listType);
-    void add(Thread thread);
+    void add(Thread &thread);
     Thread pop();
     void clear();
     unsigned long size() const;
