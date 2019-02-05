@@ -13,32 +13,28 @@ helper.h
 /Users/kaleshsingh/Desktop/Lexer/helper.h
 types.h
 /Users/kaleshsingh/Desktop/Lexer/types.h
-string
--
 fstream
 -
 sstream
 -
 
 /Users/kaleshsingh/Desktop/Lexer/main.cpp
-iostream
--
 helper.h
 /Users/kaleshsingh/Desktop/Lexer/helper.h
 thompson_vm.h
 /Users/kaleshsingh/Desktop/Lexer/thompson_vm.h
+stdio.h
+-
 
 /Users/kaleshsingh/Desktop/Lexer/thompson_vm.cpp
 thompson_vm.h
 /Users/kaleshsingh/Desktop/Lexer/thompson_vm.h
+iostream
+-
 
 /Users/kaleshsingh/Desktop/Lexer/thompson_vm.h
 types.h
 /Users/kaleshsingh/Desktop/Lexer/types.h
-vector
--
-string
--
 set
 -
 
@@ -47,6 +43,10 @@ types.h
 /Users/kaleshsingh/Desktop/Lexer/types.h
 
 /Users/kaleshsingh/Desktop/Lexer/types.h
+iostream
+-
 vector
+-
+string
 -
 

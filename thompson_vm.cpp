@@ -15,7 +15,7 @@ int ThompsonVm::tokenize() {
     int matchSp = -1;
     int matchPc = -1;
 
-    currList.push(Thread(program[pc]));
+    currList.add(Thread(program[pc]));
     for (unsigned int sp = 0;  sp < input.size(); sp++) {
         while (!currList.empty()) {
             const Instruction &inst = currList.pop().inst;
@@ -25,7 +25,7 @@ int ThompsonVm::tokenize() {
                     if (input[sp] < inst.ch &&  input[sp] > inst.ch2) {
                         break;
                     }
-                    nextList.push(Thread(program[pc+1]));
+                    nextList.add(Thread(program[pc+1]));
                     break;
                 case OpCode::MATCH:
                     // TODO: Handle prefix matches here
@@ -39,11 +39,11 @@ int ThompsonVm::tokenize() {
                     }
                     break;
                 case OpCode::JMP:
-                    currList.push(Thread(program[inst.xPc]));
+                    currList.add(Thread(program[inst.xPc]));
                     break;
                 case OpCode::SPLIT:
-                    currList.push(Thread(program[inst.xPc]));
-                    currList.push(Thread(program[inst.yPc]));
+                    currList.add(Thread(program[inst.xPc]));
+                    currList.add(Thread(program[inst.yPc]));
                     break;
             }
 
@@ -76,7 +76,7 @@ int ThompsonVm::tokenize() {
             std::cout << "Check for state exhaustion and match" << std::endl;
             Match match = Match(matchPc, input, startSp, matchSp);
             matches.push_back(match);
-            currList.push(Thread(program[0]));
+            currList.add(Thread(program[0]));
             startSp = sp;
             matchPc = -1;
             sp -= 1;

@@ -20,23 +20,21 @@ Instruction::Instruction(unsigned int pc, OpCode opCode, unsigned int xPc, unsig
 
 StateList::StateList(ListType listType) : listType(listType) {}
 
-void StateList::push(Thread thread) {
+void StateList::add(Thread thread) {
     if (thread.inst.listType != listType) {
         thread.inst.listType = listType;
-        threads.push(thread);
+        threads.push_back(thread);
     }
 }
 
 Thread StateList::pop() {
-    Thread thread = threads.top();
-    threads.pop();
+    Thread thread = threads.back();
+    threads.pop_back();
     return thread;
 }
 
 void StateList::clear() {
-    while (!threads.empty()) {
-        threads.pop();
-    }
+    threads.clear();
 }
 
 void StateList::setListType(ListType listType) {
@@ -45,6 +43,10 @@ void StateList::setListType(ListType listType) {
 
 unsigned long StateList::size() const {
     return threads.size();
+}
+
+const Thread &StateList::operator[](unsigned long i) {
+    return threads[i];
 }
 
 const bool StateList::empty() {

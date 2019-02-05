@@ -7,7 +7,6 @@
 
 #include <iostream>
 #include <vector>
-#include <stack>
 #include <string>
 
 enum class OpCode {
@@ -53,14 +52,15 @@ public:
 class StateList {
 public:
     ListType listType;
-    std::stack<Thread> threads;
+    std::vector<Thread> threads;
 
     explicit StateList(ListType listType);
     void setListType(ListType listType);
-    void push(Thread thread);
+    void add(Thread thread);
     Thread pop();
     void clear();
     unsigned long size() const;
+    const Thread& operator[](unsigned long i);
     const bool empty();
 };
 
