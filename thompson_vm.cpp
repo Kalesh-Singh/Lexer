@@ -5,8 +5,8 @@
 #include "thompson_vm.h"
 #include <iostream>         // TODO: Delete
 
-ThompsonVm::ThompsonVm(const std::vector <Instruction> &program, std::string &input) :
-    program(program), input(input) {}
+ThompsonVm::ThompsonVm(const std::vector<Instruction> &program, std::string &input) :
+        program(program), input(input) {}
 
 int ThompsonVm::tokenize() {
     std::vector<Match> matches;
@@ -17,15 +17,16 @@ int ThompsonVm::tokenize() {
 
     currList.add(program[0]);
 
-    for (unsigned int sp = 0;  sp <= input.size(); sp++) {
+    for (unsigned int sp = 0; sp <= input.size(); sp++) {
         while (!currList.empty()) {
-            const Instruction &inst = currList.pop();
-            pc = inst.pc;
+            const Instruction inst = currList.pop();
+            unsigned int pc = inst.pc;
+            program[pc].listType = ListType::NONE;
             switch (inst.opCode) {
                 case OpCode::CHAR:
                     if (sp < input.size()
                         && input[sp] < inst.ch
-                        &&  input[sp] > inst.ch2) {
+                        && input[sp] > inst.ch2) {
                         break;
                     }
                     nextList.add(program[pc+1]);
@@ -34,14 +35,13 @@ int ThompsonVm::tokenize() {
                     // TODO: Handle prefix matches here
 
                     if (matchSp < sp) {             // If the match was shorter than the current match
-                            matchPc = pc;
-                            matchSp = sp;
+                        matchPc = pc;
+                        matchSp = sp;
                     } else if (matchPc > pc) {      // Choose the match that came earlier
-                            matchPc = pc;
-                            matchSp = sp;
+                        matchPc = pc;
+                        matchSp = sp;
                     }
-
-                    std::cout << "Matched: " << input.substr(startSp, matchSp - startSp) << std::endl;
+                    std::cout << "Matched: " << matchPc << ": [" << startSp << ", " << matchSp << ")" << std::endl;
                     break;
                 case OpCode::JMP:
                     currList.add(program[inst.xPc]);
@@ -54,14 +54,18 @@ int ThompsonVm::tokenize() {
 
         }
 
+        /*
+
         std::cout << "BEFORE SWAP" << std::endl;
         std::cout << "Current List: " << currList << std::endl;
         std::cout << "Next List: " << nextList << std::endl;
+        */
 
         // Swap the 2 lists
         currList.setListType(ListType::NEXT);
         nextList.setListType(ListType::CURRENT);
         std::swap(currList, nextList);
+        /*
 
         std::cout << "AFTER SWAP" << std::endl;
         std::cout << "Current List: " << currList << std::endl;
@@ -77,6 +81,7 @@ int ThompsonVm::tokenize() {
         std::cout << "Match PC: " << matchPc << std::endl;
 
         std::cout << "Swapped Lists" << std::endl;
+        */
 
         if (currList.empty() && matchPc != -1) {        // If there was a match and states were exhausted
             std::cout << "Check for state exhaustion and match" << std::endl;

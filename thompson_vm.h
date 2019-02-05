@@ -12,8 +12,6 @@ class ThompsonVm {
 private:
     std::vector<Instruction> program;
     std::string input;
-    unsigned int pc = 0;
-    unsigned int sp = 0;
     StateList currList = StateList(ListType::CURRENT);
     StateList nextList = StateList(ListType::NEXT);
 
