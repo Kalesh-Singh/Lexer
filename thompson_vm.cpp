@@ -94,7 +94,6 @@ int ThompsonVm::tokenize() {
             startSp = sp;
             matchPc = -1;
             sp -= 1;
-            std::cout << "SP = " << sp << std::endl;
         }
     }
 #ifdef DEBUG
