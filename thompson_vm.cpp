@@ -82,10 +82,14 @@ int ThompsonVm::tokenize() {
             std::cout << "Check for state exhaustion and match" << std::endl;
             Match match = Match(matchPc, input, startSp, matchSp);
             matches.push_back(match);
+            for (Instruction &inst : program) {
+                inst.listType = ListType::NONE;
+            }
             currList.add(program[0]);
             startSp = sp;
             matchPc = -1;
             sp -= 1;
+            std::cout << "SP = " << sp << std::endl;
         }
     }
 
