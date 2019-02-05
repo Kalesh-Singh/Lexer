@@ -20,7 +20,8 @@ int main(int argc, char **argv) {
 
 
     std::string inputStr;
-    getline(std::cin, inputStr);
+    // getline(std::cin, inputStr);
+    inputStr = "aaa";
 
     ThompsonVm tVm = ThompsonVm(prog, inputStr);
     return tVm.tokenize();

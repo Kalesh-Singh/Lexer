@@ -24,12 +24,9 @@ int ThompsonVm::tokenize() {
             program[pc].listType = ListType::NONE;
             switch (inst.opCode) {
                 case OpCode::CHAR:
-                    if (sp < input.size()
-                        && input[sp] < inst.ch
-                        && input[sp] > inst.ch2) {
-                        break;
+                    if (sp < input.size() && input[sp] >= inst.ch && input[sp] <= inst.ch2) {
+                        nextList.add(program[pc+1]);
                     }
-                    nextList.add(program[pc+1]);
                     break;
                 case OpCode::MATCH:
                     // TODO: Handle prefix matches here
@@ -54,34 +51,33 @@ int ThompsonVm::tokenize() {
 
         }
 
-        /*
-
+#ifdef DEBUG
         std::cout << "BEFORE SWAP" << std::endl;
         std::cout << "Current List: " << currList << std::endl;
         std::cout << "Next List: " << nextList << std::endl;
-        */
+#endif
 
         // Swap the 2 lists
         currList.setListType(ListType::NEXT);
         nextList.setListType(ListType::CURRENT);
         std::swap(currList, nextList);
-        /*
 
+#ifdef DEBUG
         std::cout << "AFTER SWAP" << std::endl;
         std::cout << "Current List: " << currList << std::endl;
         std::cout << "Next List: " << nextList << std::endl;
+#endif
 
         // Clear the next list
         nextList.clear();
 
+#ifdef DEBUG
         std::cout << "AFTER CLEARING NEXT LIST" << std::endl;
         std::cout << "Next List: " << nextList << std::endl;
-
         std::cout << "Curr List Size: " << currList.size() << std::endl;
         std::cout << "Match PC: " << matchPc << std::endl;
-
         std::cout << "Swapped Lists" << std::endl;
-        */
+#endif
 
         if (currList.empty() && matchPc != -1) {        // If there was a match and states were exhausted
             std::cout << "Check for state exhaustion and match" << std::endl;
