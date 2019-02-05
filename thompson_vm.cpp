@@ -72,6 +72,7 @@ int ThompsonVm::tokenize() {
         std::cout << "Match PC: " << matchPc << std::endl;
 
         std::cout << "Swapped Lists" << std::endl;
+
         if (currList.empty() && matchPc != -1) {        // If there was a match and states were exhausted
             std::cout << "Check for state exhaustion and match" << std::endl;
             Match match = Match(matchPc, input, startSp, matchSp);
