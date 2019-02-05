@@ -60,8 +60,9 @@ Instruction getInstruction(const std::string &instString) {
     if (!ss.str().empty()) {
         // TODO: Throw an exception.
     }
-
+#ifdef DEBUG
     std::cout << instruction;
+#endif
 
     return instruction;
 }

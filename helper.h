@@ -2,6 +2,8 @@
 // Created by kalesh on 2/3/19.
 //
 
+// #define DEBUG   // Uncomment for debugging print outs
+
 #ifndef THOMPSONVM_HELPER_H
 #define THOMPSONVM_HELPER_H
 
