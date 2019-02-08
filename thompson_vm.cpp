@@ -3,7 +3,6 @@
 //
 
 #include "thompson_vm.h"
-#include <iostream>
 
 ThompsonVm::ThompsonVm(const std::vector<Instruction> &program, std::string &input) :
         program(program), input(input) {}

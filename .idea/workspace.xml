@@ -12,12 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0083aba-570c-4201-82a0-de2f8401efce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/helper.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper.h" beforeDir="false" afterPath="$PROJECT_DIR$/helper.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/thompson_vm.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/thompson_vm.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/types.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thompson_vm.h" beforeDir="false" afterPath="$PROJECT_DIR$/thompson_vm.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,8 +31,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thompson_vm.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="171">
+              <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+              <folding>
+                <element signature="e#164#182#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,16 +43,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/thompson_vm.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2299">
-              <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+            <state relative-caret-position="569">
+              <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
               <folding>
-                <element signature="e#39#63#0" expanded="true" />
-                <element signature="e#1755#1850#0" expanded="true" />
-                <element signature="e#2215#2380#0" expanded="true" />
-                <element signature="e#2573#2737#0" expanded="true" />
-                <element signature="e#2825#3122#0" expanded="true" />
-                <element signature="e#3262#3327#0" expanded="true" />
-                <element signature="e#3694#3755#0" expanded="true" />
+                <element signature="e#1735#1830#0" expanded="true" />
+                <element signature="e#2195#2360#0" expanded="true" />
+                <element signature="e#2553#2717#0" expanded="true" />
+                <element signature="e#2805#3102#0" expanded="true" />
+                <element signature="e#3242#3307#0" expanded="true" />
+                <element signature="e#3674#3735#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -207,18 +205,18 @@
       <workItem from="1549298975528" duration="6878000" />
       <workItem from="1549324665361" duration="6632000" />
       <workItem from="1549403302567" duration="2238000" />
-      <workItem from="1549658536994" duration="187000" />
+      <workItem from="1549658536994" duration="324000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34568000" />
+    <option name="totallyTimeSpent" value="34705000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17643468" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17643468" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -230,7 +228,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32857144" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32959184" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32959184" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="CMake" order="12" />
@@ -313,23 +311,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/thompson_vm.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="171">
+          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <folding>
+            <element signature="e#164#182#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/thompson_vm.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2299">
-          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+        <state relative-caret-position="569">
+          <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
           <folding>
-            <element signature="e#39#63#0" expanded="true" />
-            <element signature="e#1755#1850#0" expanded="true" />
-            <element signature="e#2215#2380#0" expanded="true" />
-            <element signature="e#2573#2737#0" expanded="true" />
-            <element signature="e#2825#3122#0" expanded="true" />
-            <element signature="e#3262#3327#0" expanded="true" />
-            <element signature="e#3694#3755#0" expanded="true" />
+            <element signature="e#1735#1830#0" expanded="true" />
+            <element signature="e#2195#2360#0" expanded="true" />
+            <element signature="e#2553#2717#0" expanded="true" />
+            <element signature="e#2805#3102#0" expanded="true" />
+            <element signature="e#3242#3307#0" expanded="true" />
+            <element signature="e#3674#3735#0" expanded="true" />
           </folding>
         </state>
       </provider>

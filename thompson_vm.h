@@ -8,7 +8,7 @@
 #define THOMPSONVM_THOMPSON_VM_H
 
 #include "types.h"
-#include <set>
+#include <iostream>
 
 class ThompsonVm {
 private:
