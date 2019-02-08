@@ -85,3 +85,14 @@ std::vector<Instruction> getNfaProgram(std::string &nfaPath) {
 
     return nfaProgram;
 }
+
+std::string join(const std::vector<std::string> &v, char ch) {
+    std::string str = "";
+    for (int i = 0; i < v.size(); i++) {
+        str += v[i];
+        if (i != v.size()-1){
+            str += ch;
+        }
+    }
+    return str;
+}

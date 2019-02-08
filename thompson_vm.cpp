@@ -24,6 +24,12 @@ int ThompsonVm::tokenize() {
             program[pc].listType = ListType::NONE;
             switch (inst.opCode) {
                 case OpCode::CHAR:
+                    if (input[sp] == '\r') {
+                        std::cout << "DEBUGGING:" << std::endl;
+                        std::cout << "Ch1 Value: " << (int) inst.ch <<std::endl;
+                        std::cout << "Ch2 Value: " << (int) inst.ch2 <<std::endl;
+                        std::cout << "Input Char value: " << (int) input[sp] <<std::endl;
+                    }
                     if (sp < input.size() && input[sp] >= inst.ch && input[sp] <= inst.ch2) {
                         nextList.add(program[pc + 1]);
                     }
@@ -99,11 +105,17 @@ int ThompsonVm::tokenize() {
 #ifdef DEBUG
     std::cout << "Matches Size: " << matches.size() << std::endl;
 #endif
-    // Print all the matches.
-    for (Match &m : matches) {
-        std::cout << m << std::endl;
-    }
+
 
     // Check if all the text matched.
-    return (matchPc == input.size()) ? 0 : 1;
+    if (matchSp == input.size()) {
+        // Print all the matches.
+        for (Match &m : matches) {
+            std::cout << m << std::endl;
+        }
+        return 0;
+    } else {
+        std::cerr << "lexing error" << std::endl;
+        return 1;
+    }
 }

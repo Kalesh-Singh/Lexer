@@ -7,13 +7,13 @@
 Instruction::Instruction() = default;
 
 Instruction::Instruction(unsigned int pc, OpCode opCode, char ch, char ch2) :
-    pc(pc), opCode(opCode), ch(ch), ch2(ch2) {}
+        pc(pc), opCode(opCode), ch(ch), ch2(ch2) {}
 
 Instruction::Instruction(unsigned int pc, OpCode opCode) :
-    pc(pc), opCode(opCode) {}
+        pc(pc), opCode(opCode) {}
 
 Instruction::Instruction(unsigned int pc, OpCode opCode, unsigned int xPc) :
-    pc(pc), opCode(opCode), xPc(xPc) {}
+        pc(pc), opCode(opCode), xPc(xPc) {}
 
 Instruction::Instruction(unsigned int pc, OpCode opCode, unsigned int xPc, unsigned int yPc) : pc(
         pc), opCode(opCode), xPc(xPc), yPc(yPc) {}
@@ -59,7 +59,15 @@ Match::Match(unsigned int matchPc, const std::string &input, unsigned int startS
 }
 
 std::ostream &operator<<(std::ostream &out, const Match &match) {
-    out << match.matchPc << ": \"" << match.matchStr << "\"";
+    std::string outputStr = "";
+    for (int i = 0; i < match.matchStr.size(); i++) {
+        if (match.matchStr[i] == '\n') {
+            outputStr += "\\n";
+        } else {
+            outputStr += match.matchStr[i];
+        }
+    }
+    out << match.matchPc << ":\"" << outputStr << "\"";
     return out;
 }
 
