@@ -63,6 +63,8 @@ std::ostream &operator<<(std::ostream &out, const Match &match) {
     for (int i = 0; i < match.matchStr.size(); i++) {
         if (match.matchStr[i] == '\n') {
             outputStr += "\\n";
+        } else if (match.matchStr[i] == '\t') {
+            outputStr += "\\t";
         } else {
             outputStr += match.matchStr[i];
         }
