@@ -14,7 +14,6 @@ public:
             "3 JMP 1",
             "4 dfa "
     };
-
 };
 
 TEST_F(GetInstructionTest, testGetValidCharInstruction) {
