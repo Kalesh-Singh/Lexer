@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /opt/clion/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
+RM = /opt/clion/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/kaleshsingh/Desktop/Lexer
+CMAKE_SOURCE_DIR = /home/kalesh/Desktop/Lexer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/kaleshsingh/Desktop/Lexer/cmake-build-debug
+CMAKE_BINARY_DIR = /home/kalesh/Desktop/Lexer/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ThompsonVM.dir/depend.make
@@ -59,68 +59,68 @@ include CMakeFiles/ThompsonVM.dir/flags.make
 
 CMakeFiles/ThompsonVM.dir/main.cpp.o: CMakeFiles/ThompsonVM.dir/flags.make
 CMakeFiles/ThompsonVM.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kaleshsingh/Desktop/Lexer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ThompsonVM.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ThompsonVM.dir/main.cpp.o -c /Users/kaleshsingh/Desktop/Lexer/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kalesh/Desktop/Lexer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ThompsonVM.dir/main.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ThompsonVM.dir/main.cpp.o -c /home/kalesh/Desktop/Lexer/main.cpp
 
 CMakeFiles/ThompsonVM.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ThompsonVM.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kaleshsingh/Desktop/Lexer/main.cpp > CMakeFiles/ThompsonVM.dir/main.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kalesh/Desktop/Lexer/main.cpp > CMakeFiles/ThompsonVM.dir/main.cpp.i
 
 CMakeFiles/ThompsonVM.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ThompsonVM.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kaleshsingh/Desktop/Lexer/main.cpp -o CMakeFiles/ThompsonVM.dir/main.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kalesh/Desktop/Lexer/main.cpp -o CMakeFiles/ThompsonVM.dir/main.cpp.s
 
 CMakeFiles/ThompsonVM.dir/types.cpp.o: CMakeFiles/ThompsonVM.dir/flags.make
 CMakeFiles/ThompsonVM.dir/types.cpp.o: ../types.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kaleshsingh/Desktop/Lexer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ThompsonVM.dir/types.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ThompsonVM.dir/types.cpp.o -c /Users/kaleshsingh/Desktop/Lexer/types.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kalesh/Desktop/Lexer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ThompsonVM.dir/types.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ThompsonVM.dir/types.cpp.o -c /home/kalesh/Desktop/Lexer/types.cpp
 
 CMakeFiles/ThompsonVM.dir/types.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ThompsonVM.dir/types.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kaleshsingh/Desktop/Lexer/types.cpp > CMakeFiles/ThompsonVM.dir/types.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kalesh/Desktop/Lexer/types.cpp > CMakeFiles/ThompsonVM.dir/types.cpp.i
 
 CMakeFiles/ThompsonVM.dir/types.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ThompsonVM.dir/types.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kaleshsingh/Desktop/Lexer/types.cpp -o CMakeFiles/ThompsonVM.dir/types.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kalesh/Desktop/Lexer/types.cpp -o CMakeFiles/ThompsonVM.dir/types.cpp.s
 
 CMakeFiles/ThompsonVM.dir/helper.cpp.o: CMakeFiles/ThompsonVM.dir/flags.make
 CMakeFiles/ThompsonVM.dir/helper.cpp.o: ../helper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kaleshsingh/Desktop/Lexer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ThompsonVM.dir/helper.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ThompsonVM.dir/helper.cpp.o -c /Users/kaleshsingh/Desktop/Lexer/helper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kalesh/Desktop/Lexer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ThompsonVM.dir/helper.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ThompsonVM.dir/helper.cpp.o -c /home/kalesh/Desktop/Lexer/helper.cpp
 
 CMakeFiles/ThompsonVM.dir/helper.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ThompsonVM.dir/helper.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kaleshsingh/Desktop/Lexer/helper.cpp > CMakeFiles/ThompsonVM.dir/helper.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kalesh/Desktop/Lexer/helper.cpp > CMakeFiles/ThompsonVM.dir/helper.cpp.i
 
 CMakeFiles/ThompsonVM.dir/helper.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ThompsonVM.dir/helper.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kaleshsingh/Desktop/Lexer/helper.cpp -o CMakeFiles/ThompsonVM.dir/helper.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kalesh/Desktop/Lexer/helper.cpp -o CMakeFiles/ThompsonVM.dir/helper.cpp.s
 
 CMakeFiles/ThompsonVM.dir/thompson_vm.cpp.o: CMakeFiles/ThompsonVM.dir/flags.make
 CMakeFiles/ThompsonVM.dir/thompson_vm.cpp.o: ../thompson_vm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kaleshsingh/Desktop/Lexer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ThompsonVM.dir/thompson_vm.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ThompsonVM.dir/thompson_vm.cpp.o -c /Users/kaleshsingh/Desktop/Lexer/thompson_vm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kalesh/Desktop/Lexer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ThompsonVM.dir/thompson_vm.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ThompsonVM.dir/thompson_vm.cpp.o -c /home/kalesh/Desktop/Lexer/thompson_vm.cpp
 
 CMakeFiles/ThompsonVM.dir/thompson_vm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ThompsonVM.dir/thompson_vm.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kaleshsingh/Desktop/Lexer/thompson_vm.cpp > CMakeFiles/ThompsonVM.dir/thompson_vm.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kalesh/Desktop/Lexer/thompson_vm.cpp > CMakeFiles/ThompsonVM.dir/thompson_vm.cpp.i
 
 CMakeFiles/ThompsonVM.dir/thompson_vm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ThompsonVM.dir/thompson_vm.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kaleshsingh/Desktop/Lexer/thompson_vm.cpp -o CMakeFiles/ThompsonVM.dir/thompson_vm.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kalesh/Desktop/Lexer/thompson_vm.cpp -o CMakeFiles/ThompsonVM.dir/thompson_vm.cpp.s
 
 CMakeFiles/ThompsonVM.dir/tests.cpp.o: CMakeFiles/ThompsonVM.dir/flags.make
 CMakeFiles/ThompsonVM.dir/tests.cpp.o: ../tests.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kaleshsingh/Desktop/Lexer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ThompsonVM.dir/tests.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ThompsonVM.dir/tests.cpp.o -c /Users/kaleshsingh/Desktop/Lexer/tests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kalesh/Desktop/Lexer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ThompsonVM.dir/tests.cpp.o"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ThompsonVM.dir/tests.cpp.o -c /home/kalesh/Desktop/Lexer/tests.cpp
 
 CMakeFiles/ThompsonVM.dir/tests.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ThompsonVM.dir/tests.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kaleshsingh/Desktop/Lexer/tests.cpp > CMakeFiles/ThompsonVM.dir/tests.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kalesh/Desktop/Lexer/tests.cpp > CMakeFiles/ThompsonVM.dir/tests.cpp.i
 
 CMakeFiles/ThompsonVM.dir/tests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ThompsonVM.dir/tests.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kaleshsingh/Desktop/Lexer/tests.cpp -o CMakeFiles/ThompsonVM.dir/tests.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kalesh/Desktop/Lexer/tests.cpp -o CMakeFiles/ThompsonVM.dir/tests.cpp.s
 
 # Object files for target ThompsonVM
 ThompsonVM_OBJECTS = \
@@ -140,7 +140,7 @@ ThompsonVM: CMakeFiles/ThompsonVM.dir/thompson_vm.cpp.o
 ThompsonVM: CMakeFiles/ThompsonVM.dir/tests.cpp.o
 ThompsonVM: CMakeFiles/ThompsonVM.dir/build.make
 ThompsonVM: CMakeFiles/ThompsonVM.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kaleshsingh/Desktop/Lexer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ThompsonVM"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kalesh/Desktop/Lexer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ThompsonVM"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ThompsonVM.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -153,6 +153,6 @@ CMakeFiles/ThompsonVM.dir/clean:
 .PHONY : CMakeFiles/ThompsonVM.dir/clean
 
 CMakeFiles/ThompsonVM.dir/depend:
-	cd /Users/kaleshsingh/Desktop/Lexer/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/kaleshsingh/Desktop/Lexer /Users/kaleshsingh/Desktop/Lexer /Users/kaleshsingh/Desktop/Lexer/cmake-build-debug /Users/kaleshsingh/Desktop/Lexer/cmake-build-debug /Users/kaleshsingh/Desktop/Lexer/cmake-build-debug/CMakeFiles/ThompsonVM.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kalesh/Desktop/Lexer/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kalesh/Desktop/Lexer /home/kalesh/Desktop/Lexer /home/kalesh/Desktop/Lexer/cmake-build-debug /home/kalesh/Desktop/Lexer/cmake-build-debug /home/kalesh/Desktop/Lexer/cmake-build-debug/CMakeFiles/ThompsonVM.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ThompsonVM.dir/depend
 
