@@ -11,9 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0083aba-570c-4201-82a0-de2f8401efce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="d0083aba-570c-4201-82a0-de2f8401efce" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="63" selection-start-line="63" selection-end-line="63" />
+            <state relative-caret-position="338">
+              <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -142,18 +140,18 @@
       <workItem from="1549947254711" duration="266000" />
       <workItem from="1549947529486" duration="395000" />
       <workItem from="1549947932643" duration="2675000" />
-      <workItem from="1549950627780" duration="2602000" />
+      <workItem from="1549950627780" duration="2923000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43175000" />
+    <option name="totallyTimeSpent" value="43496000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1093" height="1053" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15186246" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.037249282" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -294,8 +292,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        <state relative-caret-position="338">
+          <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
         </state>
       </provider>
     </entry>

@@ -67,7 +67,7 @@ make tests
 
 The lexer can be run be running the following command:
 
-    `cat [InputString.txt] | ./pr01 [Precompiled NFA program]`
+`cat [InputString.txt] | ./pr01 [Precompiled NFA program]`
 
 The lexer expects 2 pieces of inputs:
 1. The pathname of a file containing the precompiled NFA program.
