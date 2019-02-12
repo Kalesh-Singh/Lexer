@@ -14,7 +14,7 @@ OpCode getOpCode(const std::string &opCodeStr) {
     } else if (opCodeStr == "SPLIT") {
         return OpCode::SPLIT;
     } else {
-        // TODO: Throw an exception
+        throw "Invalid OpCode";
     }
 }
 
@@ -39,9 +39,6 @@ Instruction getInstruction(const std::string &instString) {
     switch (opCode) {
         case OpCode::CHAR:
             ss >> ch >> ch2;
-            if (ch != ch2) {
-                // TODO: Throw an exception.
-            }
             instruction = Instruction(pc, opCode, (char) ch, (char) ch2);
             break;
         case OpCode::MATCH:
@@ -58,7 +55,7 @@ Instruction getInstruction(const std::string &instString) {
     }
 
     if (!ss.str().empty()) {
-        // TODO: Throw an exception.
+        throw "Ambiguous instruction (Extraneous characters found)";
     }
 #ifdef DEBUG
     std::cout << instruction;
@@ -79,8 +76,7 @@ std::vector<Instruction> getNfaProgram(std::string &nfaPath) {
         }
         nfaFile.close();
     } else {
-        // TODO: Throw an exception.
-        std::cout << "ERR: Could not open file." << std::endl;
+        throw "File not found (could not be opened for reading)";
     }
 
     return nfaProgram;

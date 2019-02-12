@@ -34,8 +34,6 @@ int ThompsonVm::tokenize() {
                     }
                     break;
                 case OpCode::MATCH:
-                    // TODO: Handle prefix matches here
-
                     if (matchSp < sp) {             // If the match was shorter than the current match
                         matchPc = pc;
                         matchSp = sp;
