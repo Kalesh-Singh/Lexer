@@ -89,6 +89,9 @@
 		<Unit filename="/Users/kaleshsingh/Desktop/Lexer/main.cpp">
 			<Option target="ThompsonVM"/>
 		</Unit>
+		<Unit filename="/Users/kaleshsingh/Desktop/Lexer/tests.cpp">
+			<Option target="ThompsonVM"/>
+		</Unit>
 		<Unit filename="/Users/kaleshsingh/Desktop/Lexer/thompson_vm.cpp">
 			<Option target="ThompsonVM"/>
 		</Unit>

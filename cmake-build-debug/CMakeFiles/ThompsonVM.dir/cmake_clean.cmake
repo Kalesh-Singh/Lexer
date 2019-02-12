@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ThompsonVM.dir/types.cpp.o"
   "CMakeFiles/ThompsonVM.dir/helper.cpp.o"
   "CMakeFiles/ThompsonVM.dir/thompson_vm.cpp.o"
+  "CMakeFiles/ThompsonVM.dir/tests.cpp.o"
   "ThompsonVM.pdb"
   "ThompsonVM"
 )
