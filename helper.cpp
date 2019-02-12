@@ -54,9 +54,6 @@ Instruction getInstruction(const std::string &instString) {
             break;
     }
 
-    if (!ss.str().empty()) {
-        throw "Ambiguous instruction (Extraneous characters found)";
-    }
 #ifdef DEBUG
     std::cout << instruction;
 #endif
