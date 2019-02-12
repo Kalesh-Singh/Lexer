@@ -42,3 +42,38 @@ The lines in the program are delimited by `\n` and the field of the instructions
     eg. `5 SPLIT 6 8`
 
 4.  `MATCH` takes no operands.
+
+## Compiling the Lexer ##
+
+To compile the engine, run the `make` command from your shell.
+
+## Running Unit Tests ##
+
+The unit tests for this lexer require the Google Test framework.
+
+On Linux environments the framework can be setup by running the `test_setup.sh` script, by running the following commands:
+```bash
+chmod +x test_setup.sh
+sh test_setup.sh
+```
+
+The tests can be compiled and executed with the following commands:
+```bash
+make tests
+./tests
+```
+
+## Running the program ##
+
+The lexer can be run be running the following command:
+
+    `cat [InputString.txt] | ./pr01 [Precompiled NFA program]`
+
+The lexer expects 2 pieces of inputs:
+1. The pathname of a file containing the precompiled NFA program.
+2. A file containing the string to be tokenized.
+
+*NOTE:* The lexer takes input on stdin but inorder to allow for strings with the `\n` character as input we pipe the input in from a file.
+
+
+
