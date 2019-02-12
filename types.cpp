@@ -18,6 +18,33 @@ Instruction::Instruction(unsigned int pc, OpCode opCode, unsigned int xPc) :
 Instruction::Instruction(unsigned int pc, OpCode opCode, unsigned int xPc, unsigned int yPc) : pc(
         pc), opCode(opCode), xPc(xPc), yPc(yPc) {}
 
+bool Instruction::operator==(const Instruction &rhs) const {
+
+    switch (opCode) {
+        case OpCode::CHAR:
+            return pc == rhs.pc &&
+                   opCode == rhs.opCode &&
+                   ch == rhs.ch &&
+                   ch2 == rhs.ch2;
+        case OpCode::MATCH:
+            return pc == rhs.pc &&
+                   opCode == rhs.opCode;
+        case OpCode::SPLIT:
+            return pc == rhs.pc &&
+                   opCode == rhs.opCode &&
+                   xPc == rhs.xPc &&
+                   yPc == rhs.yPc;
+        case OpCode::JMP:
+            return pc == rhs.pc &&
+                   opCode == rhs.opCode &&
+                   xPc == rhs.xPc;
+    }
+}
+
+bool Instruction::operator!=(const Instruction &rhs) const {
+    return !(rhs == *this);
+}
+
 StateList::StateList(ListType listType) : listType(listType) {}
 
 void StateList::add(Instruction &inst) {

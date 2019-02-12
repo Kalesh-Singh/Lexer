@@ -32,12 +32,17 @@ public:
     unsigned int yPc;
     ListType listType = ListType::NONE;
 
-    Instruction();                                                                              // Default constructor
+    Instruction();                                                                      // Default constructor
+    Instruction(unsigned int pc, OpCode opCode, char ch, char ch2);                     // CHAR constructor
+    Instruction(unsigned int pc, OpCode opCode);                                        // MATCH constructor
+    Instruction(unsigned int pc, OpCode opCode, unsigned int xPc);                      // JMP constructor
+    Instruction(unsigned int pc, OpCode opCode, unsigned int xPc, unsigned int yPc);    // SPLIT constructor
 
-    Instruction(unsigned int pc, OpCode opCode, char ch, char ch2);                                  // CHAR constructor
-    Instruction(unsigned int pc, OpCode opCode);                                           // MATCH constructor
-    Instruction(unsigned int pc, OpCode opCode, unsigned int xPc);                       // JMP constructor
-    Instruction(unsigned int pc, OpCode opCode, unsigned int xPc, unsigned int yPc);   // SPLIT constructor
+    bool operator==(const Instruction &rhs) const;
+
+    bool operator!=(const Instruction &rhs) const;
+
+
 };
 
 std::ostream &operator<<(std::ostream &out, const Instruction &inst);
