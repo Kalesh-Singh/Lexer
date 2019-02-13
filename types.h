@@ -1,3 +1,5 @@
+#include <utility>
+
 //
 // Created by kalesh on 2/3/19.
 //
@@ -27,30 +29,30 @@ class InvalidOpCode : public std::exception {
 public:
     explicit InvalidOpCode() = default;
 
-    explicit InvalidOpCode(const char *msg)
-            : msg(msg) {}
+    explicit InvalidOpCode(std::string msg)
+            : msg(std::move(msg)) {}
 
     const char *what() {
-        return msg;
+        return (!msg.empty()) ? msg.c_str() : nullptr;
     }
 
 private:
-    const char *msg;
+    const std::string msg = "";
 };
 
 class MalformedInstruction : public std::exception {
 public:
     explicit MalformedInstruction() = default;
 
-    explicit MalformedInstruction(const char *msg)
-            : msg(msg) {}
+    explicit MalformedInstruction(std::string msg)
+    : msg(std::move(msg)) {}
 
     const char *what() {
-        return msg;
+        return (!msg.empty()) ? msg.c_str() : nullptr;
     }
 
 private:
-    const char *msg = nullptr;
+    const std::string msg = "";
 };
 
 class Instruction {
