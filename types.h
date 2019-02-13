@@ -22,6 +22,51 @@ enum class ListType {
     NONE
 };
 
+class FileNotFound : public std::exception {
+public:
+    explicit FileNotFound() = default;
+
+    explicit FileNotFound(std::string msg)
+            : msg(std::move(msg)) {}
+
+    const char *what() {
+        return (!msg.empty()) ? msg.c_str() : nullptr;
+    }
+
+private:
+    const std::string msg = "";
+};
+
+class InvalidOpCode : public std::exception {
+public:
+    explicit InvalidOpCode() = default;
+
+    explicit InvalidOpCode(std::string msg)
+            : msg(std::move(msg)) {}
+
+    const char *what() {
+        return (!msg.empty()) ? msg.c_str() : nullptr;
+    }
+
+private:
+    const std::string msg = "";
+};
+
+class MalformedInstruction : public std::exception {
+public:
+    explicit MalformedInstruction() = default;
+
+    explicit MalformedInstruction(std::string msg)
+            : msg(std::move(msg)) {}
+
+    const char *what() {
+        return (!msg.empty()) ? msg.c_str() : nullptr;
+    }
+
+private:
+    const std::string msg = "";
+};
+
 class Instruction {
 public:
     unsigned int pc;
