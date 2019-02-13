@@ -85,18 +85,22 @@ Match::Match(unsigned int matchPc, const std::string &input, unsigned int startS
     this->matchPc = matchPc;
 }
 
-std::ostream &operator<<(std::ostream &out, const Match &match) {
-    std::string outputStr = "";
-    for (int i = 0; i < match.matchStr.size(); i++) {
-        if (match.matchStr[i] == '\n') {
-            outputStr += "\\n";
-        } else if (match.matchStr[i] == '\t') {
-            outputStr += "\\t";
-        } else {
-            outputStr += match.matchStr[i];
-        }
+void replaceEscapedWithSequence(std::string &str) {
+    std::size_t found = str.find('\n');
+    while (found != std::string::npos) {
+        str.replace(found, 1, "\\n");
+        found = str.find('\n');
     }
-    out << match.matchPc << ":\"" << outputStr << "\"";
+    found = str.find('\t');
+    while (found != std::string::npos) {
+        str.replace(found, 1, "\\t");
+        found = str.find('\t');
+    }
+}
+
+std::ostream &operator<<(std::ostream &out, const Match &match) {
+    replaceEscapedWithSequence(const_cast<Match&>(match).matchStr);
+    out << match.matchPc << ":\"" << match.matchStr << "\"";
     return out;
 }
 
