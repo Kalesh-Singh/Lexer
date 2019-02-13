@@ -8,6 +8,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <exception>
 
 enum class OpCode {
     CHAR,
@@ -20,6 +21,36 @@ enum class ListType {
     CURRENT,
     NEXT,
     NONE
+};
+
+class InvalidOpCode : public std::exception {
+public:
+    explicit InvalidOpCode() = default;
+
+    explicit InvalidOpCode(const char *msg)
+            : msg(msg) {}
+
+    const char *what() {
+        return msg;
+    }
+
+private:
+    const char *msg;
+};
+
+class MalformedInstruction : public std::exception {
+public:
+    explicit MalformedInstruction() = default;
+
+    explicit MalformedInstruction(const char *msg)
+            : msg(msg) {}
+
+    const char *what() {
+        return msg;
+    }
+
+private:
+    const char *msg = nullptr;
 };
 
 class Instruction {
@@ -53,12 +84,19 @@ public:
     std::vector<Instruction> insts;
 
     explicit StateList(ListType listType);
+
     void setListType(ListType listType);
+
     void add(Instruction &inst);
+
     Instruction pop();
+
     void clear();
+
     unsigned long size() const;
-    const Instruction& operator[](unsigned long i);
+
+    const Instruction &operator[](unsigned long i);
+
     const bool empty();
 };
 
@@ -68,6 +106,7 @@ class Match {
 public:
     std::string matchStr;
     int matchPc;
+
     Match(unsigned int matchPc, const std::string &input, unsigned int startSp, unsigned int matchSp);
 };
 
