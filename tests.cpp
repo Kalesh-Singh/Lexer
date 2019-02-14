@@ -32,12 +32,11 @@ public:
     const std::string charInsts[7] = {
             "0 CHAR 10 10",     // Valid 1 char
             "0 CHAR 10 12",     // Valid range
+            "0 CHAR 12 10",     // Invalid range
             "0 CHAR a 10",      // Invalid 1st operand
             "0 CHAR 10 a",      // Invalid 2nd operand
             "0 CHAR a a",       // Both operand invalid
-            "0 CHAR 10 10 10",  // Extraneous characters
-            "0 CHAR 12 10",     // Invalid range
-
+            "0 CHAR 10 10 10"   // Extraneous characters
     };
 };
 
@@ -51,25 +50,26 @@ TEST_F(CharInstructionTest, testValidCharRange) {
     EXPECT_EQ(inst, getInstruction(charInsts[1]));
 }
 
-TEST_F(CharInstructionTest, testInvalidFirstOperand) {
+TEST_F(CharInstructionTest, testInvalidCharRange) {
     EXPECT_THROW(getInstruction(charInsts[2]), MalformedInstruction);
 }
 
-TEST_F(CharInstructionTest, testInvalidSecondOperand) {
+TEST_F(CharInstructionTest, testInvalidFirstOperand) {
     EXPECT_THROW(getInstruction(charInsts[3]), MalformedInstruction);
 }
 
-TEST_F(CharInstructionTest, testBothOperandsInvalid) {
+TEST_F(CharInstructionTest, testInvalidSecondOperand) {
     EXPECT_THROW(getInstruction(charInsts[4]), MalformedInstruction);
 }
 
-TEST_F(CharInstructionTest, testExtraneousChars) {
+TEST_F(CharInstructionTest, testBothOperandsInvalid) {
     EXPECT_THROW(getInstruction(charInsts[5]), MalformedInstruction);
 }
 
-TEST_F(CharInstructionTest, testInvalidCharRange) {
+TEST_F(CharInstructionTest, testExtraneousChars) {
     EXPECT_THROW(getInstruction(charInsts[6]), MalformedInstruction);
 }
+
 
 class MatchInstructionTest : public testing::Test {
 public:
