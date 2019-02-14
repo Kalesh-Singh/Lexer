@@ -43,6 +43,15 @@ The lines in the program are delimited by `\n` and the field of the instructions
 
 4.  `MATCH` takes no operands.
 
+## Where is the Source Code ##
+The source code for the lexer can be found in directory `kalesh-pr01`.
+
+You can change into this directory by running the following command:
+
+`cd /home/codio/workspace/kalesh-pr01`
+
+*NOTE:* The commands for comipling and running the lexer and the tests expect that you are in this working directory.
+
 ## Compiling the Lexer ##
 
 To compile the engine, run the `make` command from your shell.
@@ -63,17 +72,29 @@ make tests
 ./tests
 ```
 
+## Running the Student Grader ##
+
+Once the lexer has been compiled the student grader can be run using command:
+
+`bin/student-grader ./pr01`
+
+from the `kalesh-pr01` directory.
+
 ## Running the program ##
 
 The lexer can be run be running the following command:
 
-`cat [InputString.txt] | ./pr01 [Precompiled NFA program]`
+`./pr01 [NFA program pathname`
 
-The lexer expects 2 pieces of inputs:
-1. The pathname of a file containing the precompiled NFA program.
-2. A file containing the string to be tokenized.
+in which case the string to be parsed is expected from the keyboard.
 
-*NOTE:* The lexer takes input on stdin but inorder to allow for strings with the `\n` character as input we pipe the input in from a file.
+
+A nicer way of automating the input is to run the lexer as follow:
+
+`cat [InputString.txt] | ./pr01 [NFA program pathname]`
+
+in this case the lexer expects an extra piece of input - the pathname of the file containing the string to be tokenized.
+
 
 
 
