@@ -13,8 +13,6 @@ int main(int argc, char **argv) {
     std::cout << "NFA File: " << argv[1] << std::endl;
 #endif
 
-    // TODO: Print Usage if invalid args
-
     if (argc < 2) {
         usage();
         std::cerr << "ERROR: Expects the pathname of the NFA program as the first argument" << std::endl << std::endl;

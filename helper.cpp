@@ -93,7 +93,7 @@ Instruction getInstruction(const std::string &instString) {
     std::cout << instruction;
 #endif
 
-    // TODO: Check for extra characters in Instruction.
+    // Check for extra characters in Instruction.
     if (ss.rdbuf()->in_avail() > 0) {
         throw MalformedInstruction("Extra characters found at the end Instruction: \"" + instString + "\"");
     }
