@@ -87,6 +87,8 @@ Instruction getInstruction(const std::string &instString) {
     std::cout << instruction;
 #endif
 
+    // TODO: Check for extra characters in Instruction.
+
     return instruction;
 }
 
@@ -102,7 +104,7 @@ std::vector<Instruction> getNfaProgram(std::string &nfaPath) {
         }
         nfaFile.close();
     } else {
-        throw "File not found (could not be opened for reading)";
+        throw FileNotFound("Could not find file \"" + nfaPath + "\"");
     }
 
     return nfaProgram;
