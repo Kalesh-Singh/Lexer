@@ -22,6 +22,21 @@ enum class ListType {
     NONE
 };
 
+class InvalidPC : public std::exception {
+public:
+    explicit InvalidPC() = default;
+
+    explicit InvalidPC(std::string msg)
+            : msg(std::move(msg)) {}
+
+    const char *what() {
+        return (!msg.empty()) ? msg.c_str() : nullptr;
+    }
+
+private:
+    const std::string msg = "";
+};
+
 class FileNotFound : public std::exception {
 public:
     explicit FileNotFound() = default;

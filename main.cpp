@@ -25,16 +25,21 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-
+    // Get multiline input from stdin
     std::vector<std::string> lines;
     std::string line;
-
     while (getline(std::cin, line)) {
         lines.push_back(line);
     }
-
     std::string inputStr = join(lines, '\n');
 
-    ThompsonVm tVm = ThompsonVm(prog, inputStr);
-    return tVm.tokenize();
+    int retVal;
+    try {
+        ThompsonVm tVm = ThompsonVm(prog, inputStr);
+        retVal = tVm.tokenize();
+    } catch (InvalidPC &e) {
+        std::cerr << "ERROR: " << e.what() << std::endl;
+        return 1;
+    }
+    return retVal;
 }
