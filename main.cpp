@@ -3,12 +3,23 @@
 #include "helper.h"
 #include "thompson_vm.h"
 
+void usage() {
+    std::cout << std::endl << "Usage:" << std::endl;
+    std::cout << "\t./pr01 [NFA program pathname]" << std::endl << std::endl;
+}
+
 int main(int argc, char **argv) {
 #ifdef DEBUG
     std::cout << "NFA File: " << argv[1] << std::endl;
 #endif
 
     // TODO: Print Usage if invalid args
+
+    if (argc < 2) {
+        usage();
+        std::cerr << "ERROR: Expects the pathname of the NFA program as the first argument" << std::endl << std::endl;
+        return 1;
+    }
 
     std::string path = argv[1];
     std::vector<Instruction> prog;
