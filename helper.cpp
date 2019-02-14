@@ -88,6 +88,9 @@ Instruction getInstruction(const std::string &instString) {
 #endif
 
     // TODO: Check for extra characters in Instruction.
+    if (ss.rdbuf()->in_avail() > 0) {
+        throw MalformedInstruction("Extra characters found at the end Instruction: \"" + instString + "\"");
+    }
 
     return instruction;
 }
@@ -111,7 +114,7 @@ std::vector<Instruction> getNfaProgram(std::string &nfaPath) {
 }
 
 std::string join(const std::vector<std::string> &v, char ch) {
-    std::string str = "";
+    std::string str;
     for (int i = 0; i < v.size(); i++) {
         str += v[i];
         if (i != v.size() - 1) {
