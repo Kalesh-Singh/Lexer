@@ -15,6 +15,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0083aba-570c-4201-82a0-de2f8401efce" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -29,13 +30,13 @@
     <favorites_list name="ThompsonVM" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="461">
-                <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+              <first_editor relative-caret-position="505">
+                <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
               </first_editor>
               <second_editor />
             </state>
@@ -151,17 +152,18 @@
       <workItem from="1549950627780" duration="2923000" />
       <workItem from="1549992352883" duration="120000" />
       <workItem from="1550081204430" duration="558000" />
+      <workItem from="1550125307226" duration="6000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54202000" />
+    <option name="totallyTimeSpent" value="54760000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.1444383" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14609851" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -173,7 +175,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32857144" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3574514" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3574514" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="CMake" order="12" />
@@ -323,17 +325,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="505">
+            <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="338">
           <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="461">
-            <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>

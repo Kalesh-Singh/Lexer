@@ -18,7 +18,7 @@ The engine accepts input in a precompiled NFA Program format.
 Each line in the NFA program has the following format:
 `INSTRUCTION-INDEX OP-CODE [OPERAND-A [OPERAND-B]]`
 
-The lines in the program are delimited by `\n` and the field of the instructions are delimited by a space `" '`.
+The lines in the program are delimited by `\n` and the field of the instructions are delimited by a space `" "`.
 
 ### Op Codes ##
 
@@ -60,7 +60,7 @@ To compile the engine, run the `make` command from your shell.
 
 The unit tests for this lexer require the Google Test framework.
 
-On Linux environments the framework can be setup by running the `test_setup.sh` script, by running the following commands:
+On Linux environments the framework can be setup by executing the `test_setup.sh` script, by running the following commands:
 ```bash
 chmod +x test_setup.sh
 sh test_setup.sh
@@ -80,9 +80,9 @@ Once the lexer has been compiled the student grader can be run using command:
 
 from the `kalesh-pr01` directory.
 
-## Running the program ##
+## Running the Lexer ##
 
-The lexer can be run be running the following command:
+The lexer can be run using the following command:
 
 `./pr01 [NFA program pathname`
 
@@ -93,8 +93,4 @@ A nicer way of automating the input is to run the lexer as follow:
 
 `cat [InputString.txt] | ./pr01 [NFA program pathname]`
 
-in this case the lexer expects an extra piece of input - the pathname of the file containing the string to be tokenized.
-
-
-
-
+this command expects an extra piece of input - the pathname of the file containing the string to be tokenized.
