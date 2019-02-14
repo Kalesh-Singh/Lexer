@@ -55,6 +55,12 @@ Instruction getInstruction(const std::string &instString) {
                 throw MalformedInstruction("CHAR Instruction excepts second operand of type int in Instruction: \""
                                            + instString + "\"");
             }
+
+            if (ch2 < ch) {
+                throw MalformedInstruction(
+                        "CHAR Instruction expects second argument to be greater than or equal to the first in Instruction: \"" +
+                        instString + "\"");
+            }
             instruction = Instruction(pc, opCode, (char) ch, (char) ch2);
             break;
         case OpCode::MATCH:
